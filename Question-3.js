@@ -1,25 +1,14 @@
-var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
-
-var Avgmarks = 0;
-
-for (var i=0; i < students.length; i++) {
-        Avgmarks += students[i][1];
-        var avg = (Avgmarks/students.length);
-}
-
-console.log("Average grade: " + (Avgmarks)/students.length);
-
-        if (avg < 60){
-          console.log("Grade : F");      
-          } 
-        else if (avg < 70) {
-                console.log("Grade : D"); 
-                  } 
-        else if (avg < 80) 
-             {
-                console.log("Grade : C"); 
-        } else if (avg < 90) {
-                console.log("Grade : B"); 
-        } else if (avg < 100) {
-                console.log("Grade : A"); 
-}
+function AddtoCart() {
+    console.log('hi');
+    var x = document.getElementById('Items');
+    var new_row = x.rows[1].cloneNode(true);
+    var len = x.rows.length;
+    new_row.cells[0].innerHTML = len;
+    var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
+    inp1.id += len;
+    inp1.value = '';
+    var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
+    inp2.id += len;
+    inp2.value = '';
+    x.appendChild(new_row);
+  }
